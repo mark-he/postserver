@@ -1,0 +1,12 @@
+[
+    {
+      "name": "ATLAS_APP",
+      "driver": "com.mysql.cj.jdbc.Driver",
+      "url":"jdbc:mysql://rm-uf69e63x3hx94lx07o.mysql.rds.aliyuncs.com:3306/atlas_crm_dev?serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&useUnicode=true&autoReconnect=true",
+      "username": "batman",
+      "password": "mQhvFWCIsLYHNOxD",
+      "maxPoolSize": 5,
+      "sql": "SELECT device_id FROM device WHERE concat(appuser_id, update_time) IN (SELECT concat(appuser_id, max(update_time)) FROM device where appuser_id IN (:userIds) GROUP BY  appuser_id)",
+      "className": "com.eagletsoft.post.core.convert.impl.MysqlConvertor"
+    }
+]

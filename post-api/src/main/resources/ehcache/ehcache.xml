@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+　　<diskStore path="java.io.tmpdir" />
+　　<defaultCache maxElementsInMemory="10000" eternal="false"
+                timeToIdleSeconds="18000" timeToLiveSeconds="36000" overflowToDisk="true"
+                memoryStoreEvictionPolicy="LRU" />
+
+　　<cache name="eagletsoft" maxElementsInMemory="100000" eternal="false"
+                timeToIdleSeconds="18000" timeToLiveSeconds="36000" overflowToDisk="true"
+                memoryStoreEvictionPolicy="LRU" />
+
+</ehcache>

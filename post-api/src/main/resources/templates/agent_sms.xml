@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <subject>${username}您好</subject>
+    <content><![CDATA[尊敬的业主${username}您好，很感谢您使用我们的服务。我们将尽快为你准备好相关手续。]]></content>
+</template>

@@ -1,0 +1,62 @@
+{
+    "channels" : [
+        {
+            "name": "jpush",
+            "appkey": "76ba4520ad8fe8c31ad8177d",
+            "masterSecret" : "1d629a9ca0487f87b0d21cba"
+        },
+        {
+            "name": "jpush_crmapp",
+            "appkey": "e26942f5ffa76e76c3d7dfad",
+            "masterSecret" : "cc000870a322149355a22c16",
+            "convertor": "ATLAS_APP"
+        },
+        {
+            "name": "default"
+        }
+    ],
+    "messageTypes" : [
+        {
+            "name" : "register",
+            "arrival" : "any",
+            "routes" : [
+                {
+                    "channel": "crmapp",
+                    "template": "mobile/custom",
+                    "xxx": "xxxx"
+                }
+            ]
+        },
+        {
+            "name" : "default",
+            "arrival" : "any",
+            "routes" : [
+                {
+                    "channel": "JPUSH",
+                    "template": "default"
+                }
+            ]
+        },
+        {
+            "name" : "crmapp",
+            "arrival" : "any",
+            "routes" : [
+                {
+                    "channel": "JPUSH_CRMAPP",
+                    "template": "default"
+                }
+            ]
+        },
+        {
+            "name" : "crmapp_sm",
+            "arrival" : "any",
+            "routes" : [
+                {
+                    "channel": "DEFAULT",
+                    "template": "default"
+                }
+            ]
+        }
+    ]
+}
+
